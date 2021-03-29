@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tugasM4;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ROG
+ */
+public class array {
+      public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Masukkan banyaknya data nilai = ");
+        int angka = scan.nextInt();
+        int [] data = new int[angka];
+        for(int a =0; a<angka;a++){
+            int d = a+1;
+            System.out.print("Masukkan data nilai ke-"+d+" = " );
+            data[a]=scan.nextInt();
+        }
+        scan.close();
+       
+        
+        int Data[];
+        Data = data;
+        float JumlahData = 0;
+        int minimum = Data[0];
+        int maksimum = Data[0];
+        
+        for(int n =0 ; n<=3; n++){
+            if (Data[n] < minimum) minimum = Data[n];
+            if (Data[n] > maksimum ) maksimum = Data[n];   
+            }
+        for(int l =0 ;l < Data.length; l++){
+            JumlahData =  JumlahData + Data[l];
+            
+        }
+        
+        float rata2;
+        rata2 = JumlahData / Data.length;
+            
+            
+            
+            System.out.println("Nilai Minimum  = " +minimum);
+            System.out.println("Nilai Maksimum = " +maksimum);
+            System.out.println("Nilai rata ratanya adalah = "+rata2);
+    
+    }
+}
